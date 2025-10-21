@@ -96,10 +96,10 @@ h2 {
 
 .hit {
     background: url(./images/tca_ntds_hostile.png) no-repeat center center 60px
-        60px;
+        60px crimson;
 }
 
 .miss {
     background: url(./images/tca_ntds_missed.png) no-repeat center center 60px
-        60px;
+        60px #fdba00;
 }
