@@ -99,7 +99,7 @@ h2 {
     background-image: url("../images/tca_ntds_hostile.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 60px 60px;
+    background-size: 70px 70px;
     background-color: crimson;
 }
 
@@ -107,7 +107,7 @@ h2 {
     background-image: url("../images/tca_ntds_missed.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 60px 60px;
+    background-size: 70px 70px;
     background-color: #fdba00;
 }
 
@@ -120,7 +120,7 @@ h2 {
     min-height: 160px;
     overflow-y: auto;
     border: 1px solid #fdba00;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .message-entry {
