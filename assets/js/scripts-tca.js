@@ -16,6 +16,7 @@ class Model {
     }
 
     fire(guess) {
+        console.debug("Model.fire called with:", guess);
         for (const ship of this.ships) {
             const index = ship.locations.indexOf(guess);
             if (ship.hits[index] === "hit") {
@@ -25,6 +26,7 @@ class Model {
                 ship.hits[index] = "hit";
                 View.displayHit(guess);
                 View.displayMessage("Confirmed hit on hostile target");
+                console.debug("Model: hit at", guess);
 
                 if (this.isSunk(ship)) {
                     View.displayMessage("Hostile target confirmed sunk!");
@@ -36,6 +38,7 @@ class Model {
         }
         View.displayMiss(guess);
         View.displayMessage("Negative hit!");
+        console.debug("Model: miss at", guess);
         return false;
     }
 
@@ -83,9 +86,17 @@ class Model {
 class View {
     static displayMessage(msg) {
         const messageArea = document.getElementById("messageArea");
-        messageArea.innerText = msg;
+        if (!messageArea) return;
+        // Append messages so the user sees a running log/history
+        const entry = document.createElement("div");
+        entry.className = "message-entry";
+        const time = new Date();
+        const timestamp = time.toLocaleTimeString();
+        entry.textContent = `[${timestamp}] ${msg}`;
+        messageArea.appendChild(entry);
+        // keep the most recent messages visible
+        messageArea.scrollTop = messageArea.scrollHeight;
     }
-
     static displayHit(location) {
         const cell = document.getElementById(location);
         if (cell) cell.classList.add("hit");
@@ -105,13 +116,20 @@ class Controller {
     }
 
     processGuess(guess) {
+        console.debug("Controller.processGuess called with:", guess);
         const location = parseGuess(guess);
         if (location) {
             this.guesses++;
+            console.debug(
+                "Controller: parsed location:",
+                location,
+                "guessesCount:",
+                this.guesses
+            );
             const hit = model.fire(location);
             if (hit && model.shipsSunk === model.numShips) {
                 View.displayMessage(
-                    `You sank all my ships, in ${this.guesses} guesses!`
+                    `Scope is clear, lookouts report all hostile contacts sunk. ${this.guesses} rounds of main battery ammunition expended.`
                 );
             }
         }
@@ -121,6 +139,7 @@ class Controller {
 // Helper Functions & Event Handlers
 
 function parseGuess(guess) {
+    console.debug("parseGuess input:", guess);
     // these represent rows on the game board (A-H)
     const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H"];
     if (!guess || guess.length !== 2) {
@@ -133,6 +152,11 @@ function parseGuess(guess) {
 
     if (row === -1 || isNaN(column)) {
         alert("Nope, that is not on the board!");
+        console.debug("parseGuess invalid input - row/column error:", {
+            guess,
+            row,
+            column,
+        });
     } else if (
         row < 0 ||
         row >= model.boardSize ||
@@ -140,6 +164,7 @@ function parseGuess(guess) {
         column >= model.boardSize
     ) {
         alert("That is not on the board!");
+        console.debug("parseGuess out of range:", { guess, row, column });
     } else {
         return `${row}${column}`;
     }
@@ -149,6 +174,7 @@ function parseGuess(guess) {
 function handleFireButton() {
     const guessInput = document.getElementById("guessInput");
     const guess = guessInput.value.toUpperCase();
+    console.debug("handleFireButton clicked - guess:", guess);
     controller.processGuess(guess);
     guessInput.value = "";
 }
@@ -178,29 +204,50 @@ function handleCellClick(e) {
     const guess = idToGuess(target.id);
     if (guess) {
         // reuse controller logic so guesses count and parse/validation are consistent
+        console.debug(
+            "handleCellClick - id:",
+            target.id,
+            "mapped to guess:",
+            guess
+        );
         controller.processGuess(guess);
     }
+}
+
+// Clear the message area (defined before init so it can be referenced safely)
+function clearMessageArea() {
+    const messageArea = document.getElementById("messageArea");
+    if (!messageArea) return;
+    messageArea.innerHTML = "";
 }
 
 // Init Function
 function init() {
     const fireButton = document.getElementById("fireButton");
     const guessInput = document.getElementById("guessInput");
+    const clearLogButton = document.getElementById("clearLogButton");
     if (fireButton) fireButton.addEventListener("click", handleFireButton);
     if (guessInput) guessInput.addEventListener("keypress", handleKeyPress);
+    if (clearLogButton)
+        clearLogButton.addEventListener("click", clearMessageArea);
     model.generateShipLocations();
 
-    // Add click handlers to each battlefield cell so players can click to fire
+    // Add click handlers to ensure playability with mouse
     const cells = document.querySelectorAll("#battlefield table td[id]");
     cells.forEach((cell) => {
         // give a visual affordance that the cells are clickable
         cell.style.cursor = "pointer";
         cell.addEventListener("click", handleCellClick);
     });
+    console.debug("init complete - attached handlers to cells:", cells.length);
 }
 
 const model = new Model();
 const controller = new Controller();
 
 // Wait for DOMContentLoaded to be sure elements exist
-document.addEventListener("DOMContentLoaded", init);
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+} else {
+    init();
+}

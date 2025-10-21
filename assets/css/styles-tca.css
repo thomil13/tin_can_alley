@@ -95,11 +95,35 @@ h2 {
 }
 
 .hit {
-    background: url(./images/tca_ntds_hostile.png) no-repeat center center 60px
-        60px crimson;
+    /* image path is relative to this CSS file (assets/css), so go up one level */
+    background-image: url("../images/tca_ntds_hostile.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60px 60px;
+    background-color: crimson;
 }
 
 .miss {
-    background: url(./images/tca_ntds_missed.png) no-repeat center center 60px
-        60px #fdba00;
+    background-image: url("../images/tca_ntds_missed.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60px 60px;
+    background-color: #fdba00;
+}
+
+/* Message log styling */
+#messageArea {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    padding: 10px;
+    max-height: 320px;
+    min-height: 160px;
+    overflow-y: auto;
+    border: 1px solid #fdba00;
+    background: rgba(0,0,0,0.25);
+}
+
+.message-entry {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
 }
