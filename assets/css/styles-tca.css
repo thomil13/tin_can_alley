@@ -10,3 +10,63 @@
 }
 
 /* Color Scheme */
+
+:root {
+    --primary-font: "Departure Mono", sans-serif;
+    --background-color: black;
+    --primary-color: white;
+    --secondary-color: #fdba00;
+    --highlight-color: #c99505;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+table {
+    border-spacing: 0px;
+    margin: 0 auto;
+}
+
+td {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+}
+
+td:hover {
+    background-color: var(--highlight-color);
+}
+
+.numbers,
+.letters {
+    text-align: center;
+    font-size: 20px;
+    font-family: var(--primary-font);
+    height: 40px;
+    width: 40px;
+    color: var(--primary-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.hit {
+    background-image: url(assets/images/tca_ntds_hostile.png) no-repeat center
+        center;
+}
+
+.miss {
+    background-image: url(assets/images/tca_ntds_missed.png) no-repeat center
+        center;
+}

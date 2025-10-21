@@ -4,11 +4,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="assets/css/styles-tca.css" rel="stylesheet">
+
     <title>Tin Can Alley</title>
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div id="heading" class="text-center">
+                <h1 class="display-5">
+                    GN/DN-4208/15 Fire Control System
+                </h1>
+            </div>
+            <div id="game-area">
+                <div class="row">
+                    <div class="col-3">
+                        <h2 class="text-center">
+                            Message Log
+                        </h2>
+                        <div id="message-area"></div>
+                    </div>
+                    <div id="battlefield" class="col-6">
+                        <h2 class="text-center">
+                            Battlespace
+                        </h2>
+                        <table>
+                            <tr>
+                                <th class="numbers"></th>
+                                <th class="numbers">0</th>
+                                <th class="numbers">1</th>
+                                <th class="numbers">2</th>
+                                <th class="numbers">3</th>
+                                <th class="numbers">4</th>
+                                <th class="numbers">5</th>
+                                <th class="numbers">6</th>
+                                <th class="numbers">7</th>
+                            </tr>
+                            <tr>
+                                <th class="letters">A</th>
+                                <td>
+                                    <div id="00"></div>
+                                </td>
+                                <td>
+                                    <div id="01"></div>
+                                </td>
+                                <td>
+                                    <div id="02"></div>
+                                </td>
+                                <td>
+                                    <div id="03"></div>
+                                </td>
+                                <td>
+                                    <div id="04"></div>
+                                </td>
+                                <td>
+                                    <div id="05"></div>
+                                </td>
+                                <td>
+                                    <div id="06"></div>
+                                </td>
+                                <td>
+                                    <div id="07"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="letters">B</th>
+                                <td>
+                                    <div id="10"></div>
+                                </td>
+                                <td>
+                                    <div id="11"></div>
+                                </td>
+                                <td>
+                                    <div id="12"></div>
+                                </td>
+                                <td>
+                                    <div id="13"></div>
+                                </td>
+                                <td>
+                                    <div id="14"></div>
+                                </td>
+                                <td>
+                                    <div id="15"></div>
+                                </td>
+                                <td>
+                                    <div id="16"></div>
+                                </td>
+                                <td>
+                                    <div id="17"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="letters">C</th>
+                                <td>
+                                    <div id="20"></div>
+                                </td>
+                                <td>
+                                    <div id="21"></div>
+                                </td>
+                                <td>
+                                    <div id="22"></div>
+                                </td>
+                                <td>
+                                    <div id="23"></div>
+                                </td>
+                                <td>
+                                    <div id="24" class="miss"></div>
+                                </td>
+                                <td>
+                                    <div id="25"></div>
+                                </td>
+                                <td>
+                                    <div id="26"></div>
+                                </td>
+                                <td>
+                                    <div id="27"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="letters">D</th>
+                                <td>
+                                    <div id="30"></div>
+                                </td>
+                                <td>
+                                    <div id="31"></div>
+                                </td>
+                                <td>
+                                    <div id="32"></div>
+                                </td>
+                                <td>
+                                    <div id="33"></div>
+                                </td>
+                                <td>
+                                    <div id="34"></div>
+                                </td>
+                                <td>
+                                    <div id="35"></div>
+                                </td>
+                                <td>
+                                    <div id="36"></div>
+                                </td>
+                                <td>
+                                    <div id="37"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="letters">E</th>
+                                <td>
+                                    <div id="40"></div>
+                                </td>
+                                <td>
+                                    <div id="41"></div>
+                                </td>
+                                <td>
+                                    <div id="42"></div>
+                                </td>
+                                <td>
+                                    <div id="43"></div>
+                                </td>
+                                <td>
+                                    <div id="44"></div>
+                                </td>
+                                <td>
+                                    <div id="45"></div>
+                                </td>
+                                <td>
+                                    <div id="46"></div>
+                                </td>
+                                <td>
+                                    <div id="47"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="letters">F</th>
+                                <td>
+                                    <div id="50"></div>
+                                </td>
+                                <td>
+                                    <div id="51"></div>
+                                </td>
+                                <td>
+                                    <div id="52"></div>
+                                </td>
+                                <td>
+                                    <div id="53"></div>
+                                </td>
+                                <td>
+                                    <div id="54"></div>
+                                </td>
+                                <td>
+                                    <div id="55"></div>
+                                </td>
+                                <td>
+                                    <div id="56"></div>
+                                </td>
+                                <td>
+                                    <div id="57"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="letters">G</th>
+                                <td>
+                                    <div id="60"></div>
+                                </td>
+                                <td>
+                                    <div id="61"></div>
+                                </td>
+                                <td>
+                                    <div id="62"></div>
+                                </td>
+                                <td>
+                                    <div id="63" class="hit"></div>
+                                </td>
+                                <td>
+                                    <div id="64"></div>
+                                </td>
+                                <td>
+                                    <div id="65"></div>
+                                </td>
+                                <td>
+                                    <div id="66"></div>
+                                </td>
+                                <td>
+                                    <div id="67"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="letters">H</th>
+                                <td>
+                                    <div id="70"></div>
+                                </td>
+                                <td>
+                                    <div id="71"></div>
+                                </td>
+                                <td>
+                                    <div id="72"></div>
+                                </td>
+                                <td>
+                                    <div id="73"></div>
+                                </td>
+                                <td>
+                                    <div id="74"></div>
+                                </td>
+                                <td>
+                                    <div id="75"></div>
+                                </td>
+                                <td>
+                                    <div id="76"></div>
+                                </td>
+                                <td>
+                                    <div id="77"></div>
+                                </td>
+                        </table>
 
+                    </div>
+                    <div id="control-area" class="col-3">
+                        <h2 class="text-center">
+                            Controls
+                        </h2>
+                        <div id="active-controls">
+                            < <h3 class="text-center">
+                                Active
+                                </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/scripts-tca.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
