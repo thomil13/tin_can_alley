@@ -167,7 +167,8 @@ function idToGuess(id) {
     const row = Number(id.charAt(0));
     const col = Number(id.charAt(1));
     if (isNaN(row) || isNaN(col)) return null;
-    if (row < 0 || row >= alphabet.length || col < 0 || col >= model.boardSize) return null;
+    if (row < 0 || row >= alphabet.length || col < 0 || col >= model.boardSize)
+        return null;
     return `${alphabet[row]}${col}`;
 }
 
