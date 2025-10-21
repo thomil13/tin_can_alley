@@ -23,6 +23,39 @@ body {
     background-color: var(--background-color);
 }
 
+form {
+    padding: 15px;
+    background-color: var(--background-color);
+}
+
+form input {
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+}
+
+form input:focus {
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+    outline: none;
+    text-transform: uppercase;
+}
+
+form #fireButton {
+    background-color: var(--background-color);
+    text-transform: uppercase;
+}
+
+form #fireButton:hover {
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
 table {
     border-spacing: 0px;
     margin: 0 auto;
@@ -62,11 +95,11 @@ h2 {
 }
 
 .hit {
-    background-image: url(assets/images/tca_ntds_hostile.png) no-repeat center
-        center;
+    background: url(./images/tca_ntds_hostile.png) no-repeat center center 60px
+        60px;
 }
 
 .miss {
-    background-image: url(assets/images/tca_ntds_missed.png) no-repeat center
-        center;
+    background: url(./images/tca_ntds_missed.png) no-repeat center center 60px
+        60px;
 }
