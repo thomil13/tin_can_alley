@@ -160,15 +160,121 @@
                             <input type="text" placeholder="A0" id="guessInput" />
                             <input type="button" id="fireButton" value="Fire" />
                         </form>
+                        <form class="d-grid gap-2">
+                            <input type="button" id="resetButton" value="Reset" />
+                        </form>
+                        <div id="inactive-controls">
+                            <h3 class="text-center">
+                                Inactive
+                            </h3>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Inactive Weapons System">
+                            <button type="button" class="weapon">GWS-30 Sea Dart</button>
+                            <button type="button" class="status">Inoperable</button>
+                        </div>
+
+                        <div class="btn-group" role="group" aria-label="Inactive Weapons System">
+                            <button type="button" class="weapon">MM 38 Exocet</button>
+                            <button type="button" class="status">Inoperable</button>
+                        </div>
+
+                        <div class="btn-group" role="group" aria-label="Inactive Weapons System">
+                            <button type="button" class="weapon">STWS II Torpedo</button>
+                            <button type="button" class="status">Inoperable</button>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Inactive Sensor System">
+                            <button type="button" class="weapon">Radar - Type 996</button>
+                            <button type="button" class="status">Inoperable</button>
+                        </div>
+
+                        <div class="btn-group" role="group" aria-label="Inactive Sensor System">
+                            <button type="button" class="weapon">Sonar - Type 2050</button>
+                            <button type="button" class="status">Inoperable</button>
+                        </div>
+
+                        <div id="intelligence">
+                            <h3 class="text-center">
+                                Intelligence
+                            </h3>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="button-intel" data-bs-toggle="modal" data-bs-target="#intelModal">
+                            Intelligence Briefing
+                        </button>
+
+                        <!-- Intelligence Modal -->
+                        <div class="modal fade" id="intelModal" tabindex="-1" aria-labelledby="intelModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog model-dialpg-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="intelModalLabel">Intelligence Assessment</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6 class="text-center">Intelligence Assessment</h6>
+                                        <p>From: Fleet Intelligence Center, HQ, 6th Fleet, Naples</p>
+                                        <p>To: CO, Task Group 645</p>
+                                        <p>Classification: Secret, Command Staff Only</p>
+                                        <p>Conditions continue to deteriorate following the outbreak of open hostilities
+                                            between Warsaw Pact forces and NATO along the inner-German border. USSR and
+                                            Warsaw Pact forces have advanced towards objectives in Northern Germany,
+                                            through the Danube Valley and are threatening to break through in the Fulda
+                                            Gap. US has initiated ContPlan REFORGER.</p>
+                                        <p>Soviet Naval Forces attached to Red Banner Northern Fleet have sortied in
+                                            force from their ports along the Kola
+                                            Peninsula and are attempting to break out into the Atlantic to intercept
+                                            REFORGER convoys currently assembling of US East Coast. SOSUS has detected
+                                            Soviet SSNs and SSGNs in the GIUK Gap and off the coast of Norway. In
+                                            addition, surface forces believed to be attached to USSR Black Sea Fleet and
+                                            forward-based at USSR Mediterranean Fleet base in Tartus have been
+                                            attempting to break out into the Atlantic through the Straits of Gibraltar.
+                                        </p>
+                                        <p>It is believed that recent nuclear strikes against Gibraltar, Iceland and
+                                            Lajes in the Azores were conducted to aid in this. While it seems unlikely
+                                            that Moscow is considering a large scale nuclear attack at this point,
+                                            single weapon strikes against strategic chokepoints are possible.</p>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary button-intel" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Mission Briefing
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="assets/js/scripts-tca.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+                    <script src="assets/js/scripts-tca.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                        crossorigin="anonymous"></script>
 </body>
 
 </html>

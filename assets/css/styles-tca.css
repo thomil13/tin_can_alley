@@ -56,6 +56,16 @@ form #fireButton:hover {
     text-transform: uppercase;
 }
 
+form #resetButton {
+    background-color: var(--background-color);
+    text-transform: uppercase;
+}
+
+form #resetButton:hover {
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
 table {
     border-spacing: 0px;
     margin: 0 auto;
@@ -109,6 +119,60 @@ h2 {
     background-position: center center;
     background-size: 70px 70px;
     background-color: #fdba00;
+}
+.weapon {
+    background-color: var(--background-color);
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+    width: 12em;
+    margin-bottom: 0.4rem;
+}
+
+.status {
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    color: var(--background-color);
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+    margin-bottom: 0.4rem;
+}
+.button-intel {
+    background-color: var(--background-color);
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.button-intel:hover {
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+/* Modal Styles */
+
+.modal-content {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+    font-family: var(--primary-font);
+}
+.intelClose {
+    background-color: var(--background-color);
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
 /* Message log styling */
