@@ -143,7 +143,9 @@ function parseGuess(guess) {
     // these represent rows on the game board (A-H)
     const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H"];
     if (!guess || guess.length !== 2) {
-        alert("You must enter a letter and a number on the board!");
+        alert(
+            "Target coordinates outside of operational area! And possibly reality!"
+        );
         return null;
     }
 
@@ -151,7 +153,7 @@ function parseGuess(guess) {
     const column = Number(guess.charAt(1));
 
     if (row === -1 || isNaN(column)) {
-        alert("Nope, that is not on the board!");
+        alert("Target outside of Area of Operations!");
         console.debug("parseGuess invalid input - row/column error:", {
             guess,
             row,
@@ -163,7 +165,7 @@ function parseGuess(guess) {
         column < 0 ||
         column >= model.boardSize
     ) {
-        alert("That is not on the board!");
+        alert("Invalid target coordinates");
         console.debug("parseGuess out of range:", { guess, row, column });
     } else {
         return `${row}${column}`;
@@ -220,6 +222,12 @@ function clearMessageArea() {
     if (!messageArea) return;
     messageArea.innerHTML = "";
 }
+
+// Reset Game Functionality
+document.querySelector(".resetButton").addEventListener("click", function () {
+    window.location.reload();
+    return false;
+});
 
 // Init Function
 function init() {
