@@ -163,6 +163,7 @@ h2 {
     border: 1px solid #fdba00;
     border-radius: 0px;
     font-family: var(--primary-font);
+    text-align: justify;
 }
 .intelClose {
     background-color: var(--background-color);
@@ -173,6 +174,29 @@ h2 {
     border-radius: 0px;
     margin-bottom: 1rem;
     width: 100%;
+}
+.intelClose:hover {
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+}
+.table-modal {
+    border: 1px solid #fdba00;
+    border-radius: 0px;
+    background-color: var(--background-color);
+    width: 100%;
+}
+.table-modal th {
+    text-transform: uppercase;
+    text-align: center;
+}
+.table-modal tr {
+    text-align: center;
+    height: 70px;
+}
+.modal-body ul {
+    margin-bottom: 0.75rem;
 }
 
 /* Message log styling */
@@ -185,6 +209,7 @@ h2 {
     overflow-y: auto;
     border: 1px solid #fdba00;
     background: rgba(0, 0, 0, 0.25);
+    margin-top: 2.75rem;
 }
 
 #clearLogButton {

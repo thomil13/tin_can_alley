@@ -236,7 +236,7 @@
                                             that Moscow is considering a large scale nuclear attack at this point,
                                             single weapon strikes against strategic chokepoints are possible.</p>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
+                                            <button type="button" class="btn btn-secondary intelClose"
                                                 data-bs-dismiss="modal">Close</button>
                                         </div>
                                     </div>
@@ -244,26 +244,134 @@
                             </div>
                         </div>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary button-intel" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+                        <button type="button" class="button-intel" data-bs-toggle="modal"
+                            data-bs-target="#missionModal">
                             Mission Briefing
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="missionModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="missionModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                        <h1 class="modal-title fs-5" id="missionModalLabel">Mission Briefing</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+                                        <p>From: CINC 6th Fleet, NSA Naples</p>
+                                        <p>To: CO, HMS Liverpool D92</p>
+                                        <p>CC: CINC NATO STANAVFORLANT, CINC RN</p>
+                                        <p>Classification: Confidential</p>
+                                        <p>Following a series of nuclear strikes against Gibraltar and Rota, we have
+                                            lost contact with our radar and sonar nets covering the Strait of Gibraltar.
+                                            However, subsequent satellite reports indicate that several Soviet Surface
+                                            Action Groups have used this loss of surveillance capability to break out
+                                            into the Atlantic in force. Subsequent reports by maritime patrol aircraft
+                                            indicate that one such force, made up of <strong>three (3)</strong> FFGs or
+                                            DDGs,
+                                            believed to be
+                                            Krivak-II or Kotlin class vessels, is moving north to assume a blocking
+                                            position within the Western Approaches and intercept convoy REFORGER 1,
+                                            which set sail from Halifax two days ago.
+                                        </p>
+                                        <p>HMS Liverpool is to break off current UNREP and repair operations and proceed
+                                            with all despatch to a position 100 nautical miles SSW of Mizen Head,
+                                            Ireland. It is believed that the Soviet Surface Group was damaged by the
+                                            nuclear strikes against Gibraltar and is not operating at full capabilities.
+                                            As such, HMS Liverpool is to use all means at her disposal to eliminate the
+                                            Soviet Surface Action Group before it can intercept the convoy.
+                                        </p>
+                                        <p>Reinforcements are not to be expected as all available NATO naval assets are
+                                            currently engaged in combat operations within the Reykjanes-Faroe area.
+                                        </p>
+                                        <p>Godspeed!</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn btn-secondary intelClose"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="button-intel" data-bs-toggle="modal"
+                            data-bs-target="#referenceModal">
+                            System Reference
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="referenceModal" tabindex="-1" aria-labelledby="referenceModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="referenceModalLabel">System Reference</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6 class="text-center">System Reference</h6>
+                                        <p>Weapons Systems:
+                                        <ul>
+                                            <li>GWS-30 Sea Dart Surface to Air Missile</li>
+                                            <ul>
+                                                <li>Range: 40 Nautical Miles</li>
+                                                <li>Warhead: 100 lb HE Fragmentation</li>
+                                                <li>Guidance: Semi-Active Radar Homing</li>
+                                            </ul>
+                                            <li>MM 38 Exocet Surface to Surface Missile</li>
+                                            <ul>
+                                                <li>Range: 25 Nautical Miles</li>
+                                                <li>Warhead: 165 lb HE</li>
+                                                <li>Guidance: Active Radar Homing</li>
+                                            </ul>
+                                            <li>STWS II Anti Submarine Torpedo System</li>
+                                            <ul>
+                                                <li>Range: 12,000 Yards</li>
+                                                <li>Warhead: 100 lb HE</li>
+                                                <li>Guidance: Active/Passive Acoustic Homing</li>
+                                            </ul>
+                                        </ul>
+                                        </p>
+                                        <p>Sensor Systems:
+                                        <ul>
+                                            <li>Radar - Type 996 Surface Search Radar</li>
+                                            <ul>
+                                                <li>Range: 30 Nautical Miles</li>
+                                                <li>Frequency: I-Band</li>
+                                            </ul>
+                                            <li>Sonar - Type 2050, Active, Hull Mounted</li>
+                                            <ul>
+                                                <li>Range: 8,000 Yards</li>
+                                                <li>Frequency: Medium Frequency</li>
+                                            </ul>
+                                        </ul>
+                                        </p>
+                                        <table class="table-modal">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Symbol</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="assets/images/tca_ntds_hostile.png" alt="Hostile"
+                                                            width="70" height="70"></td>
+                                                    <td>Hostile Surface Target</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="assets/images/tca_ntds_missed.png" alt="Friendly"
+                                                            width="70" height="70"></td>
+                                                    <td>Negative Hit</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary intelClose"
                                             data-bs-dismiss="modal">Close</button>
                                     </div>
                                 </div>
