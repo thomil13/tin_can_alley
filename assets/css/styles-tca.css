@@ -54,6 +54,7 @@ form #fireButton {
 form #fireButton:hover {
     background-color: var(--secondary-color);
     text-transform: uppercase;
+    color: var(--background-color);
 }
 
 form .resetButton {
@@ -64,6 +65,7 @@ form .resetButton {
 form .resetButton:hover {
     background-color: var(--secondary-color);
     text-transform: uppercase;
+    color: var(--background-color);
 }
 
 table {
@@ -105,7 +107,6 @@ h2 {
 }
 
 .hit {
-    /* image path is relative to this CSS file (assets/css), so go up one level */
     background-image: url("../images/tca_ntds_hostile.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -139,6 +140,7 @@ h2 {
     border: 1px solid #fdba00;
     border-radius: 0px;
     margin-bottom: 0.4rem;
+    width: 8em;
 }
 .button-intel {
     background-color: var(--background-color);
@@ -147,12 +149,13 @@ h2 {
     color: var(--primary-color);
     border: 1px solid #fdba00;
     border-radius: 0px;
-    margin-bottom: 1rem;
-    width: 100%;
+    margin-bottom: 0.25rem;
+    width: 20em;
 }
 .button-intel:hover {
     background-color: var(--secondary-color);
     text-transform: uppercase;
+    color: var(--background-color);
 }
 
 /* Modal Styles */
@@ -180,6 +183,7 @@ h2 {
     text-transform: uppercase;
     border: 1px solid #fdba00;
     border-radius: 0px;
+    color: var(--background-color);
 }
 .table-modal {
     border: 1px solid #fdba00;
@@ -225,6 +229,7 @@ h2 {
 #clearLogButton:hover {
     background-color: var(--secondary-color);
     text-transform: uppercase;
+    color: var(--background-color);
 }
 
 .message-entry {

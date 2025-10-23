@@ -163,6 +163,10 @@
                         <form class="d-grid gap-2">
                             <input type="button" class="resetButton" value="Reset" />
                         </form>
+                        <div class="btn-group" role="group" aria-label="Active Weapons System">
+                            <button type="button" class="weapon">4.5 inch MK 8 Gun</button>
+                            <button type="button" class="status">Selected</button>
+                        </div>
                         <div id="inactive-controls">
                             <h3 class="text-center">
                                 Inactive
@@ -214,13 +218,14 @@
                                     </div>
                                     <div class="modal-body">
                                         <h6 class="text-center">Intelligence Assessment</h6>
-                                        <p>From: Fleet Intelligence Center, HQ, 6th Fleet, Naples</p>
+                                        <p>From: Fleet Intelligence Center, HQ, 6th Fleet, NSA Naples</p>
                                         <p>To: CO, Task Group 64-5</p>
                                         <p>Classification: Secret, Command Staff Only</p>
                                         <p>Conditions continue to deteriorate following the outbreak of open hostilities
                                             between Warsaw Pact forces and NATO along the inner-German border. USSR and
                                             Warsaw Pact forces have advanced towards objectives in Northern Germany,
-                                            through the Danube Valley and are threatening to break through in the Fulda
+                                            through neutral Austria into the Danube Valley, and are threatening to break
+                                            through in the Fulda
                                             Gap. US has initiated ContPlan REFORGER.</p>
                                         <p>Soviet Naval Forces attached to Red Banner Northern Fleet have sortied in
                                             force from their ports along the Kola
@@ -234,7 +239,8 @@
                                         <p>It is believed that recent nuclear strikes against Gibraltar, Iceland and
                                             Lajes in the Azores were conducted to aid in this. While it seems unlikely
                                             that Moscow is considering a large scale nuclear attack at this point,
-                                            single weapon strikes against strategic chokepoints are possible.</p>
+                                            further single weapon strikes against strategic chokepoints are possible.
+                                        </p>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary intelClose"
                                                 data-bs-dismiss="modal">Close</button>
@@ -295,6 +301,93 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Modal Trigger Button (optional) -->
+                        <button type="button" class="button-intel" data-bs-toggle="modal"
+                            data-bs-target="#forecastModal">
+                            Weather Briefing
+                        </button>
+
+                        <!-- Modal Structure -->
+                        <div class="modal fade" id="forecastModal" tabindex="-1" aria-labelledby="forecastModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="forecastModalLabel">Fleet Weather Forecast</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="teletype">
+ZNR UUUUU  
+R 231800Z OCT 2025  
+FM FLEET NAVAL WEATHER CENTER NORFOLK VA  
+TO COMSIXTHFLT  
+INFO RN NORTHWOOD HQ  
+     NATO STANAVFORLANT  
+     CTG SIX FOUR POINT FIVE  
+     CTF SIX ZERO  
+BT  
+UNCLAS //N03145//  
+MSGID/GENADMIN/FLEWEACEN NORFOLK VA/231800ZOCT25//  
+
+SUBJ/NORTH ATLANTIC OPERATIONAL WX FCST POST-STRIKE//  
+
+REF/A/OPORD WW3/STRIKE SUMMARY ICELAND/AZORES/GIBRALTAR//  
+
+RMKS/1. SYNOPSIS: RAPIDLY DEEPENING LOW PRES SYS (956MB) LOCATED 300NM W OF ICELAND MOVG ENE.  
+FALLOUT DISPERSION FROM NUDET EVENTS AT KEFLAVIK, AKUREYRI, LAJES, AND GIBRALTAR CONTRIBUTING  
+TO ELEVATED RAD LVLS IN DOWNWIND SECTORS.  
+
+2. FCST VALID 240000Z TO 251200Z OCT 25:  
+A. WIND: NW BECMG W 35-50KT G60KT NR FRONTAL BNDYS.  
+B. SEA STATE: 5-8, SIG WAVE HTS 4-9M.  
+C. VIS: 500-1500M IN PCPN AND FALLOUT HAZE.  
+D. CEILING: 200-800FT AGL, LOCALLY LWR NR ICELAND/AZORES.  
+E. WX: FREQ SHWRS RA/SL/HAIL. ISOL TSTMS PSBL.  
+F. TEMP: SFC 0C TO +3C. WIND CHILL BLW -5C.  
+G. RAD ADVISORY:  
+   (1) KEFLAVIK/AKUREYRI: 6-7 RAD/HR WITHIN 50NM.  
+   (2) LAJES: 5 RAD/HR WITHIN 30NM.  
+   (3) GIBRALTAR: 5-6 RAD/HR, HOTSPOTS NR COASTAL RIDGELINES.  
+   (4) PLUME TRAJ: NW-SE, DESCENDING TWD MID-ATLANTIC.  
+
+3. OPS IMPACT:  
+A. SURFACE OPS IN ICELANDIC WATERS HIGH RISK DUE TO COMBINED WX AND RAD.  
+B. AVOID AERIAL OPS BLW 1000FT AGL.  
+C. INITIATE DECON PROTOCOLS FOR UNITS TRANSITING CONTAM ZONES.  
+D. SECURE TOPSIDE EQUIP. EXPECT INTERMITTENT HF COMMS DISRUPTION DUE TO IONOSPHERIC INSTABILITY.  
+
+4. NEXT FCST UPDATE 240600Z OR AS CONDS WARRANT.  
+
+BT  
+#231800Z/OCT25/FLEWEACEN NORFOLK//  
+NNNN
+        </pre>
+
+                                        <div class=modal-body">
+                                            <strong>// CLEAR TEXT SUMMARY //</strong><br><br>
+                                            A powerful North Atlantic storm is forming west of Iceland, bringing
+                                            gale-force winds, rough seas, and freezing temperatures. Fallout from recent
+                                            nuclear strikes in Iceland, the Azores, and Gibraltar is spreading
+                                            southeastward, raising radiation levels in affected zones. Visibility is
+                                            poor, ceilings are low, and precipitation includes rain, sleet, and hail.
+                                            Naval operations near Iceland are considered high risk due to both weather
+                                            and radiation. Aircraft should avoid flying below 1,000 feet, and ships
+                                            transiting fallout zones must follow decontamination protocols.
+                                            Communications may be disrupted due to ionospheric instability. Next update
+                                            expected at 0600Z.
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary intelClose"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Button trigger modal -->
                         <button type="button" class="button-intel" data-bs-toggle="modal"
                             data-bs-target="#referenceModal">
@@ -315,6 +408,12 @@
                                         <h6 class="text-center">System Reference</h6>
                                         <p>Weapons Systems:
                                         <ul>
+                                            <li>4.5 inch MK 8 Naval Gun</li>
+                                            <ul>
+                                                <li>Range: 12,000 Yards</li>
+                                                <li>Warhead: 55 lb HE</li>
+                                                <li>Rate of Fire: 20 Rounds per Minute</li>
+                                            </ul>
                                             <li>GWS-30 Sea Dart Surface to Air Missile</li>
                                             <ul>
                                                 <li>Range: 40 Nautical Miles</li>
