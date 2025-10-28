@@ -39,7 +39,7 @@
                         </h2>
                         <div id="messageArea">
                         </div>
-                        <input type="button" id="clearLogButton" value="Clear Log" />
+                        <input type="button" id="clearLogButton" value="Clear Log"/>
                     </div>
                     <div id="battlefield" class="col-6">
                         <h2 class="text-center">
@@ -157,11 +157,11 @@
                             </h3>
                         </div>
                         <form>
-                            <input type="text" placeholder="A0" id="guessInput" />
-                            <input type="button" id="fireButton" value="Fire" />
+                            <input type="text" placeholder="A0" id="guessInput"/>
+                            <input type="button" id="fireButton" value="Fire"/>
                         </form>
                         <form class="d-grid gap-2">
-                            <input type="button" class="resetButton" value="Reset" />
+                            <input type="button" class="resetButton" value="Reset"/>
                         </form>
                         <div class="btn-group" role="group" aria-label="Active Weapons System">
                             <button type="button" class="weapon">4.5 inch MK 8 Gun</button>
@@ -311,7 +311,7 @@
                         <!-- Modal Structure -->
                         <div class="modal fade" id="forecastModal" tabindex="-1" aria-labelledby="forecastModalLabel"
                             aria-hidden="true">
-                            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                            <div class="modal-dialog modal-lg modal-dialog-scrollable">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="forecastModalLabel">Fleet Weather Forecast</h5>
@@ -319,54 +319,56 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <pre class="teletype">
-ZNR UUUUU  
-R 231800Z OCT 2025  
-FM FLEET NAVAL WEATHER CENTER NORFOLK VA  
-TO COMSIXTHFLT  
-INFO RN NORTHWOOD HQ  
-     NATO STANAVFORLANT  
-     CTG SIX FOUR POINT FIVE  
-     CTF SIX ZERO  
-BT  
-UNCLAS //N03145//  
-MSGID/GENADMIN/FLEWEACEN NORFOLK VA/231800ZOCT25//  
+                                        <p class="teletype">
+                                        <p>ZNR UUUUU</p>
+                                        <p>R 231800Z OCT 2025</p>
+                                        <p>FM FLEET NAVAL WEATHER CENTER NORFOLK VA</p>
+                                        <p>TO COMSIXTHFLT</p>
+                                        <p>INFO RN NORTHWOOD HQ</p>
+                                        <p>NATO STANAVFORLANT</p>
+                                        <p>CTG SIX FOUR POINT FIVE</p>
+                                        <p>CTF SIX ZERO</p>
+                                        <p>BT</p>
+                                        <p>UNCLAS //N03145//</p>
+                                        <p>MSGID/GENADMIN/FLEWEACEN NORFOLK VA/231800ZOCT25//</p>
+                                        <br>
+                                        <p>SUBJ/NORTH ATLANTIC OPERATIONAL WX FCST POST-STRIKE//</p>
+                                        <br>
+                                        <p>REF/A/OPORD WW3/STRIKE SUMMARY ICELAND/AZORES/GIBRALTAR//</p>
+                                        <br>
+                                        <p>RMKS/1. SYNOPSIS: RAPIDLY DEEPENING LOW PRES SYS (956MB) LOCATED 300NM W OF
+                                            ICELAND MOVG ENE.</p>
+                                        <p>FALLOUT DISPERSION FROM NUDET EVENTS AT KEFLAVIK, AKUREYRI, LAJES, AND
+                                            GIBRALTAR CONTRIBUTING
+                                            TO ELEVATED RAD LVLS IN DOWNWIND SECTORS.</p>
+                                        <br>
+                                        <p>2. FCST VALID 240000Z TO 251200Z OCT 25:</p>
+                                        <p>A. WIND: NW BECMG W 35-50KT G60KT NR FRONTAL BNDYS.</p>
+                                        <p>B. SEA STATE: 5-8, SIG WAVE HTS 4-9M.</p>
+                                        <p>C. VIS: 500-1500M IN PCPN AND FALLOUT HAZE.</p>
+                                        <p>D. CEILING: 200-800FT AGL, LOCALLY LWR NR ICELAND/AZORES.</p>
+                                        <p>E. WX: FREQ SHWRS RA/SL/HAIL. ISOL TSTMS PSBL.</p>
+                                        <p>F. TEMP: SFC 0C TO +3C. WIND CHILL BLW -5C.</p>
+                                        <p>G. RAD ADVISORY:</p>
+                                        <p>(1) KEFLAVIK/AKUREYRI: 6-7 RAD/HR WITHIN 50NM.</p>
+                                        <p>(2) LAJES: 5 RAD/HR WITHIN 30NM.</p>
+                                        <p>(3) GIBRALTAR: 5-6 RAD/HR, HOTSPOTS NR COASTAL RIDGELINES.</p>
+                                        <p>(4) PLUME TRAJ: NW-SE, DESCENDING TWD MID-ATLANTIC.</p>
+                                        <br>
+                                        <p>3. OPS IMPACT:</p>
+                                        <p> A. SURFACE OPS IN ICELANDIC WATERS HIGH RISK DUE TO COMBINED WX AND RAD.</p>
+                                        <p> B. AVOID AERIAL OPS BLW 1000FT AGL.</p>
+                                        <p> C. INITIATE DECON PROTOCOLS FOR UNITS TRANSITING CONTAM ZONES.</p>
+                                        <p> D. SECURE TOPSIDE EQUIP. EXPECT INTERMITTENT HF COMMS DISRUPTION DUE TO
+                                            IONOSPHERIC INSTABILITY.</p>
+                                        <br>
+                                        <p>4. NEXT FCST UPDATE 240600Z OR AS CONDS WARRANT.</p>
 
-SUBJ/NORTH ATLANTIC OPERATIONAL WX FCST POST-STRIKE//  
+                                        <p>BT</p>
+                                        <p>#231800Z/OCT25/FLEWEACEN NORFOLK//</p>
+                                        <p>NNNN</p>
 
-REF/A/OPORD WW3/STRIKE SUMMARY ICELAND/AZORES/GIBRALTAR//  
-
-RMKS/1. SYNOPSIS: RAPIDLY DEEPENING LOW PRES SYS (956MB) LOCATED 300NM W OF ICELAND MOVG ENE.  
-FALLOUT DISPERSION FROM NUDET EVENTS AT KEFLAVIK, AKUREYRI, LAJES, AND GIBRALTAR CONTRIBUTING  
-TO ELEVATED RAD LVLS IN DOWNWIND SECTORS.  
-
-2. FCST VALID 240000Z TO 251200Z OCT 25:  
-A. WIND: NW BECMG W 35-50KT G60KT NR FRONTAL BNDYS.  
-B. SEA STATE: 5-8, SIG WAVE HTS 4-9M.  
-C. VIS: 500-1500M IN PCPN AND FALLOUT HAZE.  
-D. CEILING: 200-800FT AGL, LOCALLY LWR NR ICELAND/AZORES.  
-E. WX: FREQ SHWRS RA/SL/HAIL. ISOL TSTMS PSBL.  
-F. TEMP: SFC 0C TO +3C. WIND CHILL BLW -5C.  
-G. RAD ADVISORY:  
-   (1) KEFLAVIK/AKUREYRI: 6-7 RAD/HR WITHIN 50NM.  
-   (2) LAJES: 5 RAD/HR WITHIN 30NM.  
-   (3) GIBRALTAR: 5-6 RAD/HR, HOTSPOTS NR COASTAL RIDGELINES.  
-   (4) PLUME TRAJ: NW-SE, DESCENDING TWD MID-ATLANTIC.  
-
-3. OPS IMPACT:  
-A. SURFACE OPS IN ICELANDIC WATERS HIGH RISK DUE TO COMBINED WX AND RAD.  
-B. AVOID AERIAL OPS BLW 1000FT AGL.  
-C. INITIATE DECON PROTOCOLS FOR UNITS TRANSITING CONTAM ZONES.  
-D. SECURE TOPSIDE EQUIP. EXPECT INTERMITTENT HF COMMS DISRUPTION DUE TO IONOSPHERIC INSTABILITY.  
-
-4. NEXT FCST UPDATE 240600Z OR AS CONDS WARRANT.  
-
-BT  
-#231800Z/OCT25/FLEWEACEN NORFOLK//  
-NNNN
-        </pre>
-
-                                        <div class=modal-body">
+                                        <div class="modal-body">
                                             <strong>// CLEAR TEXT SUMMARY //</strong><br><br>
                                             A powerful North Atlantic storm is forming west of Iceland, bringing
                                             gale-force winds, rough seas, and freezing temperatures. Fallout from recent
@@ -406,48 +408,46 @@ NNNN
                                     </div>
                                     <div class="modal-body">
                                         <h6 class="text-center">System Reference</h6>
-                                        <p>Weapons Systems:
-                                        <ul>
-                                            <li>4.5 inch MK 8 Naval Gun</li>
+                                        Weapons Systems:
                                             <ul>
-                                                <li>Range: 12,000 Yards</li>
-                                                <li>Warhead: 55 lb HE</li>
-                                                <li>Rate of Fire: 20 Rounds per Minute</li>
+                                                <li>4.5 inch MK 8 Naval Gun</li>
+                                                    <ul>
+                                                        <li>Range: 12,000 Yards</li>
+                                                        <li>Warhead: 55 lb HE</li>
+                                                        <li>Rate of Fire: 20 Rounds per Minute</li>
+                                                    </ul>
+                                                <li>GWS-30 Sea Dart Surface to Air Missile</li>
+                                                    <ul>
+                                                        <li>Range: 40 Nautical Miles</li>
+                                                        <li>Warhead: 100 lb HE Fragmentation</li>
+                                                        <li>Guidance: Semi-Active Radar Homing</li>
+                                                    </ul>
+                                                <li>MM 38 Exocet Surface to Surface Missile</li>
+                                                    <ul>
+                                                        <li>Range: 25 Nautical Miles</li>
+                                                        <li>Warhead: 165 lb HE</li>
+                                                        <li>Guidance: Active Radar Homing</li>
+                                                    </ul>
+                                                <li>STWS II Anti Submarine Torpedo System</li>
+                                                    <ul>
+                                                        <li>Range: 12,000 Yards</li>
+                                                        <li>Warhead: 100 lb HE</li>
+                                                        <li>Guidance: Active/Passive Acoustic Homing</li>
+                                                    </ul>
                                             </ul>
-                                            <li>GWS-30 Sea Dart Surface to Air Missile</li>
+                                        Sensor Systems:
                                             <ul>
-                                                <li>Range: 40 Nautical Miles</li>
-                                                <li>Warhead: 100 lb HE Fragmentation</li>
-                                                <li>Guidance: Semi-Active Radar Homing</li>
+                                                <li>Radar - Type 996 Surface Search Radar</li>
+                                                    <ul>
+                                                        <li>Range: 30 Nautical Miles</li>
+                                                        <li>Frequency: I-Band</li>
+                                                    </ul>
+                                                <li>Sonar - Type 2050, Active, Hull Mounted</li>
+                                                    <ul>
+                                                        <li>Range: 8,000 Yards</li>
+                                                        <li>Frequency: Medium Frequency</li>
+                                                    </ul>
                                             </ul>
-                                            <li>MM 38 Exocet Surface to Surface Missile</li>
-                                            <ul>
-                                                <li>Range: 25 Nautical Miles</li>
-                                                <li>Warhead: 165 lb HE</li>
-                                                <li>Guidance: Active Radar Homing</li>
-                                            </ul>
-                                            <li>STWS II Anti Submarine Torpedo System</li>
-                                            <ul>
-                                                <li>Range: 12,000 Yards</li>
-                                                <li>Warhead: 100 lb HE</li>
-                                                <li>Guidance: Active/Passive Acoustic Homing</li>
-                                            </ul>
-                                        </ul>
-                                        </p>
-                                        <p>Sensor Systems:
-                                        <ul>
-                                            <li>Radar - Type 996 Surface Search Radar</li>
-                                            <ul>
-                                                <li>Range: 30 Nautical Miles</li>
-                                                <li>Frequency: I-Band</li>
-                                            </ul>
-                                            <li>Sonar - Type 2050, Active, Hull Mounted</li>
-                                            <ul>
-                                                <li>Range: 8,000 Yards</li>
-                                                <li>Frequency: Medium Frequency</li>
-                                            </ul>
-                                        </ul>
-                                        </p>
                                         <table class="table-modal">
                                             <thead>
                                                 <tr>
@@ -477,10 +477,14 @@ NNNN
                             </div>
                         </div>
                     </div>
-                    <script src="assets/js/scripts-tca.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-                        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-                        crossorigin="anonymous"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/scripts-tca.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
